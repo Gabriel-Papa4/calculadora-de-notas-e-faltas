@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faltas por Disciplina</title>
+    <link rel="stylesheet" href="css/style-med66.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+     <header>
+        <div class="container">
+            <h1>Controle de Faltas</h1>
+            <h2>4° Período</h2>
+        </div>
+    </header>
+    <main class="container">
+        <br>
+        <a href="med66-hub.html" class="voltar">← Voltar para página inicial</a>
+
+    
+
+        <div class="controle-faltas-container">
+
+                        <div class="falta-disciplina-card" data-disciplina-id="ff">
+                <h4>FISIOLOGIA E FISIOPATOLOGIA IV:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-ff-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-ff-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="ff">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-ff-geral"></span>
+                        </div>
+                        <div id="faltas-ff-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-ff-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="falta-disciplina-card" data-disciplina-id="ss">
+                <h4>SEMIOLOGIA I:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-ss-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-ss-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="ss">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-ss-geral"></span>
+                        </div>
+                        <div id="faltas-ss-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-ss-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card" data-disciplina-id="iah">
+                <h4>INTERAÇÃO AGENTE HOSPEDEIRO II:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-iah-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-iah-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="iah">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-iah-geral"></span>
+                        </div>
+                        <div id="faltas-iah-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-iah-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="falta-disciplina-card" data-disciplina-id="farma">
+                <h4>FARMACOLOGIA II:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-farma-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-farma-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="farma">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-farma-geral"></span>
+                        </div>
+                        <div id="faltas-farma-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-farma-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+              <div class="falta-disciplina-card" data-disciplina-id="sa">
+                <h4>SAÚDE MENTAL I:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-sa-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-sa-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="sa">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-sa-geral"></span>
+                        </div>
+                        <div id="faltas-sa-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-sa-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card" data-disciplina-id="hm">
+                <h4>HABILIDADES MÉDICAS III:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-hm-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-hm-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="hm">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-hm-geral"></span>
+                        </div>
+                        <div id="faltas-hm-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-hm-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card" data-disciplina-id="iic">
+                <h4>PATOLOGIA GERAL:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-iic-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-iic-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="iic">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-iic-geral"></span>
+                        </div>
+                        <div id="faltas-iic-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-iic-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+
+            <div>
+                <h4>EXPLICAÇÃO:</h4><br>
+<h5>Fisiologia e Fisiopatologia IV</h5>            
+8 tempos de aula por semana<br>
+144h totais<br>
+1 falta = -0.695%<br>
+<br>
+<h5>Semiologia I</h5>                                       
+8 tempos de aula por semana<br>
+144h totais<br>
+1 falta = -0.695%<br>
+<br>
+<h5>Interação Agente Hospedeiro II</h5>
+4 tempos de aula por semana  <br>
+72h totais<br>
+1 falta = -1.39%<br>
+<br>
+<h5>Farmacologia II</h5>                         
+4 tempos de aula por semana  <br>
+72h totais<br>
+1 falta = -1.39%<br>
+<br>
+<h5>Saúde Mental I</h5>                                  
+4 tempos de aula por semana  <br>
+72h totais<br>
+1 falta = -1.39%<br>
+<br>
+<h5>Habilidades Médicas III</h5>                 
+2 tempos de aula por semana <br>
+36h totais      <br>
+1 falta = -2.78%<br>
+<br>
+<h5>Patologia Geral</h5>                                  
+2 tempos de aula por semana <br>
+36h totais      <br>
+1 falta = -2.78%<br>
+
+            </div>
+            <br>
+            <br>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Autoria de Gabriel Papa</p>
+        </div>
+    </footer>
+
+    <script src="js/controle-faltas-4periodo.js"></script> </body>
+
+</html>

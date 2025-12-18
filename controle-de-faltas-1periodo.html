@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faltas por Disciplina</title>
+    <link rel="stylesheet" href="css/style-med69.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+     <header>
+        <div class="container">
+            <h1>Controle de Faltas</h1>
+            <h2>1° Período</h2> </div>
+    </header>
+    <main class="container">
+        <br>
+        <a href="med69-hub.html" class="voltar">← Voltar para página inicial</a>
+
+    
+
+        <div class="controle-faltas-container">
+            <div class="falta-disciplina-card" data-disciplina-id="bmf">
+                <h4>BASES MORFOFUNCIONAIS:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-bmf-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-bmf-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="bmf">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-bmf-geral"></span>
+                        </div>
+                        <div id="faltas-bmf-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-bmf-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="falta-disciplina-card" data-disciplina-id="ss1">
+                <h4>SAÚDE E SOCIEDADE I:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-ss1-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-ss1-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="ss1">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-ss1-geral"></span>
+                        </div>
+                        <div id="faltas-ss1-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-ss1-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card" data-disciplina-id="bmm1">
+                <h4>BIOQUÍMICA MOLECULAR E METABÓLICA I:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-bmm1-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-bmm1-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="bmm1">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-bmm1-geral"></span>
+                        </div>
+                        <div id="faltas-bmm1-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-bmm1-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="falta-disciplina-card" data-disciplina-id="ai1">
+                <h4>ATIVIDADES INTEGRADORAS I:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-ai1-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-ai1-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="ai1">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-ai1-geral"></span>
+                        </div>
+                        <div id="faltas-ai1-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-ai1-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+              <div class="falta-disciplina-card" data-disciplina-id="fpc">
+                <h4>FUNDAMENTOS DA PESQUISA CIENTÍFICA I:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-fpc-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-fpc-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="fpc">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-fpc-geral"></span>
+                        </div>
+                        <div id="faltas-fpc-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-fpc-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card" data-disciplina-id="sa1">
+                <h4>SOCIOLOGIA E ANTROPOLOGIA I:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-sa1-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-sa1-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="sa1">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-sa1-geral"></span>
+                        </div>
+                        <div id="faltas-sa1-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-sa1-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <br>
+        <br>
+
+            <div>
+                <h4>EXPLICAÇÃO:</h4><br>
+
+<h5>BASES MORFOFUNCIONAIS</h5>    
+180h totais<br>
+1 falta = -0.556%<br>
+<br>
+<h5>SAÚDE E SOCIEDADE I</h5>                                       
+72h totais<br>
+1 falta = -1.39%<br>
+<br>
+<h5>BIOQUÍMICA MOLECULAR E METABÓLICA I</h5>
+72h totais<br>
+1 falta = -1.39%<br>
+<br>
+<h5>ATIVIDADES INTEGRADORAS I</h5>                         
+72h totais<br>
+1 falta = -1.39%<br>
+<br>
+<h5>FUNDAMENTOS DA PESQUISA CIENTÍFICA I</h5>                                  
+36h totais<br>
+1 falta = -2.78%<br>
+<br>
+<h5>SOCIOLOGIA E ANTROPOLOGIA I</h5>                 
+36h totais<br>
+1 falta = -2.78%<br>
+</div>
+            <br>
+            <br>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Autoria de Gabriel Papa</p>
+        </div>
+    </footer>
+
+    <script src="js/controle-faltas-1periodo.js"></script> </body> </html>

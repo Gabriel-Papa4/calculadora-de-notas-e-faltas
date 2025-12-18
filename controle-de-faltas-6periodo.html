@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faltas por Disciplina - 6° Período</title>
+    <link rel="stylesheet" href="css/style-med64.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Controle de Faltas</h1>
+            <h2>6° Período</h2>
+        </div>
+    </header>
+
+    <main class="container">
+        <br>
+        <a href="med64-hub.html" class="voltar">← Voltar para página inicial</a>
+
+        <div class="controle-faltas-container">
+            <div class="falta-disciplina-card" data-disciplina-id="racio-clin">
+                <h4>RACIOCÍNIO CLÍNICO:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-racio-clin-input">Número de faltas:</label>
+                        <input type="number" id="faltas-racio-clin-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="racio-clin">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>Ainda pode ter: <span class="valor-faltas" id="faltas-racio-clin-geral"></span></div>
+                        <div id="faltas-racio-clin-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-racio-clin-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card" data-disciplina-id="semio-go">
+                <h4>SEMIOLOGIA GINECOLÓGICA E OBSTÉTRICA:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-semio-go-input">Número de faltas:</label>
+                        <input type="number" id="faltas-semio-go-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="semio-go">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>Ainda pode ter: <span class="valor-faltas" id="faltas-semio-go-geral"></span></div>
+                        <div id="faltas-semio-go-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-semio-go-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card" data-disciplina-id="dip">
+                <h4>DOENÇAS INFECCIOSAS E PARASITÁRIAS:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-dip-input">Número de faltas:</label>
+                        <input type="number" id="faltas-dip-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="dip">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>Ainda pode ter: <span class="valor-faltas" id="faltas-dip-geral"></span></div>
+                        <div id="faltas-dip-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-dip-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card" data-disciplina-id="epidemi">
+                <h4>EPIDEMIOLOGIA CLÍNICA E SAÚDE BASEADA EM EVIDÊNCIAS:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-epidemi-input">Número de faltas:</label>
+                        <input type="number" id="faltas-epidemi-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="epidemi">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>Ainda pode ter: <span class="valor-faltas" id="faltas-epidemi-geral"></span></div>
+                        <div id="faltas-epidemi-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-epidemi-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card" data-disciplina-id="dermato">
+                <h4>DERMATOLOGIA:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-dermato-input">Número de faltas:</label>
+                        <input type="number" id="faltas-dermato-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="dermato">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>Ainda pode ter: <span class="valor-faltas" id="faltas-dermato-geral"></span></div>
+                        <div id="faltas-dermato-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-dermato-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card" data-disciplina-id="otorrino">
+                <h4>OTORRINOLARINGOLOGIA:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-otorrino-input">Número de faltas:</label>
+                        <input type="number" id="faltas-otorrino-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="otorrino">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>Ainda pode ter: <span class="valor-faltas" id="faltas-otorrino-geral"></span></div>
+                        <div id="faltas-otorrino-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-otorrino-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <div class="explicacao">
+              <h4>EXPLICAÇÃO:</h4><br>
+            <h5>RACIOCÍNIO CLÍNICO</h5>            
+            216h totais<br>
+            1 falta = -0.463%<br>
+            <br>
+            <h5>SEMIOLOGIA GINECOLÓGICA E OBSTÉTRICA</h5>                                       
+            120h totais<br>
+            1 falta = -0.834%<br>
+            <br>
+            <h5>DOENÇAS INFECCIOSAS E PARASITÁRIAS</h5>
+            108h totais<br>
+            1 falta = -0.926%<br>
+            <br>
+            <h5>EPIDEMIOLOGIA CLÍNICA E SAÚDE BASEADA EM EVIDÊNCIAS</h5>                         
+            72h totais<br>
+            1 falta = 1.39%<br>
+            <br>
+            <h5>DERMATOLOGIA</h5>                                  
+            36h totais<br>
+            1 falta = -2.78%<br>
+            <br>
+            <h5>OTORRINOLARINGOLOGIA</h5>                                  
+            36h totais<br>
+            1 falta = -2.78%<br>
+        </div>
+        <br><br>
+    </main>
+
+    <footer>
+        <div class="container"><p>Autoria de Gabriel Papa</p></div>
+    </footer>
+
+    <script src="js/controle-faltas-6periodo.js"></script>
+</body>
+</html>

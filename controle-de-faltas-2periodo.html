@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faltas por Disciplina</title>
+    <link rel="stylesheet" href="css/style-med68.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+     <header>
+        <div class="container">
+            <h1>Controle de Faltas</h1>
+            <h2>2° Período</h2> </div>
+    </header>
+    <main class="container">
+        <br>
+        <a href="med68-hub.html" class="voltar">← Voltar para página inicial</a>
+
+    
+
+        <div class="controle-faltas-container">
+            <div class="falta-disciplina-card" data-disciplina-id="sne">
+                <h4>SISTEMAS INTEGRADOS - NERVOSO E ENDÓCRINO:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-sne-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-sne-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="sne">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-sne-geral"></span>
+                        </div>
+                        <div id="faltas-sne-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-sne-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="falta-disciplina-card" data-disciplina-id="sdr">
+                <h4>SISTEMAS INTEGRADOS - DIGESTÓRIO E REPRODUTOR:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-sdr-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-sdr-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="sdr">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-sdr-geral"></span>
+                        </div>
+                        <div id="faltas-sdr-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-sdr-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card" data-disciplina-id="hm1">
+                <h4>HABILIDADES MÉDICAS I:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-hm1-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-hm1-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="hm1">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-hm1-geral"></span>
+                        </div>
+                        <div id="faltas-hm1-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-hm1-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="falta-disciplina-card" data-disciplina-id="ss2">
+                <h4>SAÚDE E SOCIEDADE II:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-ss2-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-ss2-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="ss2">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-ss2-geral"></span>
+                        </div>
+                        <div id="faltas-ss2-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-ss2-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+              <div class="falta-disciplina-card" data-disciplina-id="ai2">
+                <h4>ATIVIDADES INTEGRADORAS II:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-ai2-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-ai2-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="ai2">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-ai2-geral"></span>
+                        </div>
+                        <div id="faltas-ai2-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-ai2-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card" data-disciplina-id="bm">
+                <h4>BIOLOGIA MOLECULAR:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-bm-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-bm-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="bm">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-bm-geral"></span>
+                        </div>
+                        <div id="faltas-bm-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-bm-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="falta-disciplina-card" data-disciplina-id="bmm2">
+                <h4>BIOQUÍMICA MOLECULAR E METABÓLICA II:</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-bmm2-input">Digite seu número de faltas</label>
+                        <input type="number" id="faltas-bmm2-input" min="0">
+                        <button type="button" class="btn-calcular-falta" data-disciplina-ref="bmm2">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode ter: </span>
+                            <span class="valor-faltas" id="faltas-bmm2-geral"></span>
+                        </div>
+                        <div id="faltas-bmm2-prouni-container" style="display:none;">
+                            <span class="obs-prouni" id="faltas-bmm2-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <br>
+        <br>
+
+            <div>
+                <h4>EXPLICAÇÃO:</h4><br>
+
+<h5>SISTEMAS INTEGRADOS - NERVOSO E ENDÓCRINO</h5>    
+126h totais<br>
+1 falta = -0.794%<br>
+<br>
+<h5>SISTEMAS INTEGRADOS - DIGESTÓRIO E REPRODUTOR</h5>                                       
+90h totais<br>
+1 falta = -1.112%<br>
+<br>
+<h5>HABILIDADES MÉDICAS I</h5>
+72h totais<br>
+1 falta = -1.39%<br>
+<br>
+<h5>SAÚDE E SOCIEDADE II</h5>                         
+72h totais<br>
+1 falta = -1.39%<br>
+<br>
+<h5>ATIVIDADES INTEGRADORAS II</h5>                                  
+72h totais<br>
+1 falta = -1.39%<br>
+<br>
+<h5>BIOLOGIA MOLECULAR</h5>                 
+72h totais<br>
+1 falta = -1.39%<br>
+<br>
+<h5>BIOQUÍMICA MOLECULAR E METABÓLICA II</h5>                                  
+72h totais<br>
+1 falta = -1.39%<br>
+</div>
+            <br>
+            <br>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Autoria de Gabriel Papa</p>
+        </div>
+    </footer>
+
+    <script src="js/controle-faltas-2periodo.js"></script> </body>
+
+</html>
