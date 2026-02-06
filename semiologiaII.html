@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEMIOLOGIA II - Calculadora de Notas</title>
+    <link rel="stylesheet" href="css/style-med65.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Calculadora de Notas</h1>
+            <h2>5° Período</h2>
+        </div>
+    </header>
+
+    <main class="container">
+        <br>
+        <a href="calculadora-hub-5periodo.html" class="voltar">← Voltar para página inicial</a>
+
+        <div class="calculadora">
+            <h2>SEMIOLOGIA II</h2>
+
+            <form id="calculadora-form">
+                
+                <div class="grade-input-section">
+                    <div class="grade-input-group main-grade p1-toggle-header" data-target-details="p1ComponentsDetailsSemio2">
+                        <label for="p1-completa">P1 (10 pontos):</label>
+                        <input type="number" id="p1-completa" min="0" max="10" step="0.01" placeholder="Digite a nota da P1">
+                        <span class="p1-components-label-action toggle-trigger">CALCULAR P1 POR COMPONENTES</span>
+                        <button type="button" class="expand-arrow-button toggle-trigger">
+                            <span class="arrow-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="p1-components-details" id="p1ComponentsDetailsSemio2" style="display: none;">
+                        <div class="form-group">
+                            <label for="p1-longitudinal">
+                                <span>Ficha Longitudinal I</span>
+                                <span class="points-label">(1,0 ponto)</span>
+                            </label>
+                            <input type="number" id="p1-longitudinal" min="0" max="1" step="0.01" placeholder="Nota Ficha Long.">
+                        </div>
+                        <div class="form-group">
+                            <label for="p1-teorica">
+                                <span>Prova Teórica I</span>
+                                <span class="points-label">(4,0 pontos)</span>
+                            </label>
+                            <input type="number" id="p1-teorica" min="0" max="4" step="0.01" placeholder="Nota Prova Teórica">
+                        </div>
+                        <div class="form-group">
+                            <label for="p1-anamnese">
+                                <span>Prova Anamnese I</span>
+                                <span class="points-label">(2,0 pontos)</span>
+                            </label>
+                            <input type="number" id="p1-anamnese" min="0" max="2" step="0.01" placeholder="Nota Prova Anamnese">
+                        </div>
+                        <div class="form-group">
+                            <label for="p1-pratica">
+                                <span>Prova Prática I</span>
+                                <span class="points-label">(3,0 pontos)</span>
+                            </label>
+                            <input type="number" id="p1-pratica" min="0" max="3" step="0.01" placeholder="Nota Prova Prática">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grade-input-section">
+                    <div class="grade-input-group main-grade p2-toggle-header" data-target-details="p2ComponentsDetailsSemio2">
+                        <label for="p2-completa">P2 (10 pontos):</label>
+                        <input type="number" id="p2-completa" min="0" max="10" step="0.01" placeholder="Digite a nota da P2">
+                        <span class="p2-components-label-action toggle-trigger">CALCULAR P2 POR COMPONENTES</span>
+                        <button type="button" class="expand-arrow-button toggle-trigger">
+                            <span class="arrow-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="p2-components-details" id="p2ComponentsDetailsSemio2" style="display: none;">
+                        <div class="form-group">
+                            <label for="p2-longitudinal">
+                                <span>Ficha Longitudinal II</span>
+                                <span class="points-label">(1,0 ponto)</span>
+                            </label>
+                            <input type="number" id="p2-longitudinal" min="0" max="1" step="0.01" placeholder="Nota Ficha Long.">
+                        </div>
+                        <div class="form-group">
+                            <label for="p2-teorica">
+                                <span>Prova Teórica II</span>
+                                <span class="points-label">(3,0 pontos)</span>
+                            </label>
+                            <input type="number" id="p2-teorica" min="0" max="3" step="0.01" placeholder="Nota Prova Teórica">
+                        </div>
+                        <div class="form-group">
+                            <label for="p2-anamnese">
+                                <span>Prova Anamnese II</span>
+                                <span class="points-label">(2,0 pontos)</span>
+                            </label>
+                            <input type="number" id="p2-anamnese" min="0" max="2" step="0.01" placeholder="Nota Prova Anamnese">
+                        </div>
+                        <div class="form-group">
+                            <label for="p2-pratica">
+                                <span>Prova Prática II</span>
+                                <span class="points-label">(3,0 pontos)</span>
+                            </label>
+                            <input type="number" id="p2-pratica" min="0" max="3" step="0.01" placeholder="Nota Prova Prática">
+                        </div>
+                        <div class="form-group">
+                            <label for="p2-portfolio">
+                                <span>E-Portfólio</span>
+                                <span class="points-label">(1,0 ponto)</span>
+                            </label>
+                            <input type="number" id="p2-portfolio" min="0" max="1" step="0.01" placeholder="Nota E-Portfólio">
+                        </div>
+                    </div>
+                </div>
+
+<br>
+            <h4>OBS: “Ficha de Avaliação Longitudinal”</h4>    <br>        
+            <h5> -  Habilidades: valerá 0,8 pontos;</h5>
+            <h5> - Conhecimentos: valerá  0,2 pontos;</h5>
+            <h5> - Cada falta não justificada despontua 0,1 ponto</h5>
+            <h5> - Atitudes: não comprimento de algum dos quesitos da competência atitude se traduzirá por despontuação, podendo chegar até 1,0 ponto (totalidade da ficha);</h5>
+<br>
+
+                <div class="buttons">
+                    <button type="button" id="calcular" class="btn-calcular">Calcular</button>
+                    <button type="button" id="limpar" class="btn-limpar">Limpar</button>
+                </div>
+            </form>
+
+            <div id="resultado" class="resultado" style="display: none;">
+                <h3>Resultado:</h3>
+                <div id="media-final" style="display: none;" class="media-final-wrapper">
+                    <p>Sua média final é: <strong id="nota-final">0.00</strong></p>
+                    <p id="mensagem"></p>
+                    <p id="detalhamento-notas" style="font-size: 0.85em; color: #666; margin-top: 8px; border-top: 1px solid #eee; padding-top: 5px;"></p>
+                </div>
+                <div id="notas-necessarias"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Autoria de Gabriel Papa</p>
+        </div>
+    </footer>
+
+    <script src="js/script-med65.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calcularBtn = document.getElementById('calcular');
+            const limparBtn = document.getElementById('limpar');
+            
+            if (calcularBtn) calcularBtn.addEventListener('click', calcularNota);
+            if (limparBtn) limparBtn.addEventListener('click', () => {
+                const form = document.getElementById('calculadora-form');
+                if (form) form.reset();
+                const res = document.getElementById('resultado');
+                if (res) res.style.display = 'none';
+            });
+            
+            // Lógica de Expandir/Recolher
+            const triggers = document.querySelectorAll('.expand-arrow-button, .p1-components-label-action, .p2-components-label-action');
+            triggers.forEach(el => {
+                el.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const header = this.closest('.grade-input-group');
+                    const targetId = header.getAttribute('data-target-details');
+                    const details = document.getElementById(targetId);
+                    const arrow = header.querySelector('.arrow-icon');
+                    
+                    if (details.style.display === 'none') {
+                        details.style.display = 'block';
+                        if(arrow) arrow.textContent = '▲';
+                        header.classList.add('expanded');
+                    } else {
+                        details.style.display = 'none';
+                        if(arrow) arrow.textContent = '▼';
+                        header.classList.remove('expanded');
+                    }
+                };
+            });
+        });
+
+        function formatarNotaLocal(val) { return parseFloat(val).toFixed(2); }
+
+        function getNota(id) {
+            const el = document.getElementById(id);
+            if (!el) return null;
+            const val = el.value;
+            return val !== '' ? parseFloat(val) : null;
+        }
+
+        // Função para listar componentes faltantes
+        function calculateMissingForPx(target, components) {
+            let html = '';
+            let currentSum = 0;
+            const missing = components.filter(c => c.v === null);
+            components.filter(c => c.v !== null).forEach(c => currentSum += c.v);
+
+            if (missing.length === 0) return '';
+
+            const neededSum = target - currentSum;
+            const maxMissingSum = missing.reduce((sum, c) => sum + c.m, 0);
+
+            if (neededSum > maxMissingSum + 0.01) {
+                return false; // Impossível
+            }
+
+            missing.forEach(comp => {
+                const proportion = maxMissingSum > 0 ? comp.m / maxMissingSum : 0;
+                const neededScore = neededSum * proportion;
+                const fmt = (typeof formatarNota === 'function') ? formatarNota : formatarNotaLocal;
+                const scoreToShow = Math.max(0, Math.min(comp.m, neededScore));
+                html += `<li style="list-style-type: '→ '; padding-left: 10px;">${comp.n}: <strong>${fmt(scoreToShow)}</strong> (de ${comp.m.toFixed(1)})</li>`;
+            });
+            return html;
+        }
+
+        function calcularNota() {
+            // --- Coleta P1 ---
+            let p1_final = getNota('p1-completa');
+            const p1Long = getNota('p1-longitudinal');
+            const p1Teo = getNota('p1-teorica');
+            const p1Anam = getNota('p1-anamnese');
+            const p1Prat = getNota('p1-pratica');
+            
+            // Verifica se P1 está 100% preenchida via componentes
+            const p1_components_full = (p1Long !== null && p1Teo !== null && p1Anam !== null && p1Prat !== null);
+            
+            // Define P1 efetiva (apenas se completa ou input principal usado)
+            let p1 = null;
+            if (p1_final !== null) {
+                p1 = p1_final;
+            } else if (p1_components_full) {
+                p1 = p1Long + p1Teo + p1Anam + p1Prat;
+            }
+
+            // --- Coleta P2 ---
+            let p2_final = getNota('p2-completa');
+            const p2Long = getNota('p2-longitudinal');
+            const p2Teo = getNota('p2-teorica');
+            const p2Anam = getNota('p2-anamnese');
+            const p2Prat = getNota('p2-pratica');
+            const p2Port = getNota('p2-portfolio');
+            
+            // Verifica se P2 está 100% preenchida via componentes
+            const p2_components_full = (p2Long !== null && p2Teo !== null && p2Anam !== null && p2Prat !== null && p2Port !== null);
+
+            // Define P2 efetiva
+            let p2 = null;
+            if (p2_final !== null) {
+                p2 = p2_final;
+            } else if (p2_components_full) {
+                p2 = p2Long + p2Teo + p2Anam + p2Prat + p2Port;
+            }
+
+            // --- Elementos DOM ---
+            const resultadoDiv = document.getElementById('resultado');
+            const mediaFinalDiv = document.getElementById('media-final');
+            const notasNecessariasDiv = document.getElementById('notas-necessarias');
+            const notaFinalEl = document.getElementById('nota-final');
+            const mensagemEl = document.getElementById('mensagem');
+            const detalhamentoEl = document.getElementById('detalhamento-notas');
+
+            // --- Limpeza ---
+            mediaFinalDiv.style.display = 'none';
+            notasNecessariasDiv.innerHTML = '';
+            mediaFinalDiv.classList.remove('aprovado', 'recuperacao', 'reprovado');
+            mensagemEl.className = '';
+            const linkPfWrapper = mediaFinalDiv.querySelector('.link-pf-wrapper');
+            if (linkPfWrapper) linkPfWrapper.remove();
+            
+            const PASSING_GRADE = 7.0;
+            const fmt = (typeof formatarNota === 'function') ? formatarNota : formatarNotaLocal;
+            const msgFunc = (typeof obterMensagem === 'function') ? obterMensagem : (n) => (n>=7?"Aprovado":"Reprovado");
+
+            const gerarDetalhamento = (vP1, vP2) => {
+                const tP1 = (vP1 !== null) ? fmt(vP1) : "--";
+                const tP2 = (vP2 !== null) ? fmt(vP2) : "--";
+                return `média P1: ${tP1} &nbsp;&nbsp; média P2: ${tP2}`;
+            };
+
+            // --- LÓGICA DE DECISÃO ---
+
+            // CASO 1: Tudo preenchido (Cálculo Final)
+            if (p1 !== null && p2 !== null) {
+                notasNecessariasDiv.style.display = 'none';
+                mediaFinalDiv.style.display = 'block';
+
+                const mediaFinalValor = (p1 + p2) / 2;
+                notaFinalEl.textContent = fmt(mediaFinalValor);
+                mensagemEl.textContent = msgFunc(mediaFinalValor);
+
+                if (mediaFinalValor >= PASSING_GRADE) {
+                    mediaFinalDiv.classList.add('aprovado');
+                    mensagemEl.classList.add('aprovado-msg');
+                } else if (mediaFinalValor >= 3) {
+                    mediaFinalDiv.classList.add('recuperacao');
+                    mensagemEl.classList.add('recuperacao-msg');
+                    const linkPf = document.createElement('p');
+                    linkPf.className = 'link-pf-wrapper';
+                    linkPf.innerHTML = `<a href="prova-final.html" class="btn-calcular" style="display: inline-block; margin-top: 10px; text-decoration: none; text-align: center;">Cálculo da Prova Final</a>`;
+                    mediaFinalDiv.appendChild(linkPf);
+                } else {
+                    mediaFinalDiv.classList.add('reprovado');
+                    mensagemEl.classList.add('reprovado-msg');
+                }
+                detalhamentoEl.innerHTML = gerarDetalhamento(p1, p2);
+            } 
+            // CASO 2: Alguma nota incompleta (Cálculo de Necessidades)
+            else {
+                mediaFinalDiv.style.display = 'none';
+                notasNecessariasDiv.style.display = 'block';
+                
+                // Helper para somar com segurança (null vira 0)
+                const safeSum = (...args) => args.reduce((a, b) => a + (b || 0), 0);
+                
+                // Somas das notas parciais (o que o aluno já garantiu)
+                const sumP1Components = safeSum(p1Long, p1Teo, p1Anam, p1Prat);
+                const sumP2Components = safeSum(p2Long, p2Teo, p2Anam, p2Prat, p2Port);
+                
+                const sumP1 = (p1 !== null) ? p1 : sumP1Components;
+                const sumP2 = (p2 !== null) ? p2 : sumP2Components;
+                const somaAtual = sumP1 + sumP2;
+
+                // Potencial Máximo: Soma garantida + o máximo dos campos que estão null
+                // Máximos P1: Long=1, Teo=4, Anam=2, Prat=3
+                let maxMissingP1 = 0;
+                if (p1 === null) {
+                    if (p1Long === null) maxMissingP1 += 1.0;
+                    if (p1Teo === null) maxMissingP1 += 4.0;
+                    if (p1Anam === null) maxMissingP1 += 2.0;
+                    if (p1Prat === null) maxMissingP1 += 3.0;
+                }
+                const potP1 = (p1_final !== null) ? p1_final : (sumP1 + maxMissingP1);
+
+                // Máximos P2: Long=1, Teo=3, Anam=2, Prat=3, Port=1
+                let maxMissingP2 = 0;
+                if (p2 === null) {
+                    if (p2Long === null) maxMissingP2 += 1.0;
+                    if (p2Teo === null) maxMissingP2 += 3.0;
+                    if (p2Anam === null) maxMissingP2 += 2.0;
+                    if (p2Prat === null) maxMissingP2 += 3.0;
+                    if (p2Port === null) maxMissingP2 += 1.0;
+                }
+                const potP2 = (p2_final !== null) ? p2_final : (sumP2 + maxMissingP2);
+
+                const mediaPotencial = (potP1 + potP2) / 2;
+
+                // 2a. Já Passou?
+                if (somaAtual / 2 >= PASSING_GRADE) {
+                    notasNecessariasDiv.innerHTML = '<h4>Resultado:</h4><p class="aprovado-msg" style="font-weight: bold;">Parabéns, você já passou!</p>';
+                    notasNecessariasDiv.innerHTML += `<p class="small-text-breakdown">${gerarDetalhamento(p1, p2)}</p>`;
+                } 
+                // 2b. Impossível passar?
+                else if (mediaPotencial < PASSING_GRADE) {
+                    notasNecessariasDiv.innerHTML = '<h4>Resultado:</h4><p class="reprovado-msg" style="font-weight: bold;">Com as notas atuais, não é possível atingir média 7.</p>';
+                    notasNecessariasDiv.innerHTML += `<p class="small-text-breakdown">${gerarDetalhamento(p1, p2)}</p>`;
+                } 
+                // 2c. Ainda pode passar (Mostra o que falta)
+                else {
+                    let htmlOutput = '';
+
+                    // Exibir parciais
+                    if (p1 !== null) {
+                        htmlOutput += `<div class="partial-grade-info">P1 : ${fmt(p1)}</div>`;
+                    } else if (sumP1 > 0) {
+                        htmlOutput += `<div class="partial-grade-info">P1 Parcial: ${fmt(sumP1)}</div>`;
+                    }
+
+                    if (p2 !== null) {
+                         htmlOutput += `<div class="partial-grade-info">P2 : ${fmt(p2)}</div>`;
+                    } else if (sumP2 > 0) {
+                        htmlOutput += `<div class="partial-grade-info">P2 Parcial: ${fmt(sumP2)}</div>`;
+                    }
+                    
+                    htmlOutput += '<h4>Notas necessárias para média 7:</h4><ul>';
+                    
+                    // Definição dos Componentes
+                    const p1Comps = [
+                        {n:'Ficha Longitudinal I', m:1.0, v:p1Long},
+                        {n:'Prova Teórica I', m:4.0, v:p1Teo},
+                        {n:'Prova Anamnese I', m:2.0, v:p1Anam},
+                        {n:'Prova Prática I', m:3.0, v:p1Prat}
+                    ];
+                    const p2Comps = [
+                        {n:'Ficha Longitudinal II', m:1.0, v:p2Long},
+                        {n:'Prova Teórica II', m:3.0, v:p2Teo},
+                        {n:'Prova Anamnese II', m:2.0, v:p2Anam},
+                        {n:'Prova Prática II', m:3.0, v:p2Prat},
+                        {n:'E-Portfólio', m:1.0, v:p2Port}
+                    ];
+
+                    // Se P1 incompleta
+                    if (p1 === null) {
+                        // Calcula quanto falta para chegar a 14 no total, considerando o que já tem na P2
+                        // Mas o cálculo simples "Por Prova" é mais fácil de entender: Mira 7 na P1 se P2 estiver aberta.
+                        
+                        if (p2 !== null) {
+                             // P2 fechada, calculamos exatamente quanto precisa na P1
+                             const neededP1 = 14 - p2;
+                             htmlOutput += `<li style="list-style-type: none;"><strong>--- Para P1 fechar com ${fmt(neededP1)} ---</strong></li>`;
+                             const res = calculateMissingForPx(neededP1, p1Comps);
+                             htmlOutput += res ? res : '<li>Impossível atingir.</li>';
+                        } else {
+                            // Ambas abertas. Mostra meta 7.0 para P1
+                            htmlOutput += `<li style="list-style-type: none;"><strong>--- Para P1 atingir 7.00 ---</strong></li>`;
+                             const res = calculateMissingForPx(7, p1Comps);
+                             htmlOutput += res ? res : '<li>Impossível.</li>';
+                        }
+                    }
+
+                    // Se P2 incompleta
+                    if (p2 === null) {
+                        if (p1 !== null) {
+                             // P1 fechada, calculamos exatamente quanto precisa na P2
+                             const neededP2 = 14 - p1;
+                             if (neededP2 <= 0) {
+                                 htmlOutput += '<li>Você já garantiu a nota!</li>';
+                             } else {
+                                htmlOutput += `<li style="list-style-type: none;"><strong>--- Para P2 fechar com ${fmt(neededP2)} ---</strong></li>`;
+                                const res = calculateMissingForPx(neededP2, p2Comps);
+                                htmlOutput += res ? res : '<li>Impossível atingir com os componentes restantes.</li>';
+                             }
+                        } else {
+                             // Ambas abertas. Mostra meta 7.0 para P2
+                             htmlOutput += `<li style="list-style-type: none;"><strong>--- Para P2 atingir 7.00 ---</strong></li>`;
+                             const res = calculateMissingForPx(7, p2Comps);
+                             htmlOutput += res ? res : '<li>Impossível.</li>';
+                        }
+                    }
+                    
+                    htmlOutput += '</ul>';
+                    notasNecessariasDiv.innerHTML = htmlOutput;
+                }
+            }
+            resultadoDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAÚDE MENTAL II - Calculadora de Notas</title>
+    <link rel="stylesheet" href="css/style-med65.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Calculadora de Notas</h1>
+            <h2>5° Período</h2>
+        </div>
+    </header>
+
+    <main class="container">
+        <br>
+        <a href="calculadora-hub-5periodo.html" class="voltar">← Voltar para página inicial</a>
+
+        <div class="calculadora">
+            <h2>SAÚDE MENTAL II</h2>
+
+            <form id="calculadora-form">
+                <div class="grade-input-section">
+                    <div class="grade-input-group main-grade">
+                        <label for="p1">P1 - Avaliação Escrita (10 pontos):</label>
+                        <input type="number" id="p1" min="0" max="10" step="0.01" placeholder="Digite a nota da P1">
+                    </div>
+                </div>
+
+                <div class="grade-input-section">
+                    <div class="grade-input-group main-grade">
+                        <label for="p2">P2 - Trabalho em grupo (10 pontos):</label>
+                        <input type="number" id="p2" min="0" max="10" step="0.01" placeholder="Digite a nota da P2">
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button type="button" id="calcular" class="btn-calcular">Calcular</button>
+                    <button type="button" id="limpar" class="btn-limpar">Limpar</button>
+                </div>
+            </form>
+
+            <div id="resultado" class="resultado" style="display: none;">
+                <h3>Resultado:</h3>
+                
+                <div id="media-final" style="display: none;" class="media-final-wrapper">
+                    <p>Sua média final é: <strong id="nota-final">0.00</strong></p>
+                    <p id="mensagem"></p>
+                    <p id="detalhamento-notas" style="font-size: 0.85em; color: #666; margin-top: 8px; border-top: 1px solid #eee; padding-top: 5px;"></p>
+                </div>
+
+                <div id="notas-necessarias"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Autoria de Gabriel Papa</p>
+        </div>
+    </footer>
+
+    <script src="js/script-med65.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calcularBtn = document.getElementById('calcular');
+            const limparBtn = document.getElementById('limpar');
+            
+            if (calcularBtn) calcularBtn.addEventListener('click', calcularNota);
+            if (limparBtn) limparBtn.addEventListener('click', () => {
+                // Função simples de limpar caso o script externo não cubra tudo
+                document.getElementById('calculadora-form').reset();
+                document.getElementById('resultado').style.display = 'none';
+            });
+        });
+
+        // Fallback caso a função não exista no script externo
+        function formatarNotaLocal(valor) {
+            return parseFloat(valor).toFixed(2);
+        }
+
+        function getNota(id) {
+            const val = document.getElementById(id).value;
+            return val !== '' ? parseFloat(val) : null;
+        }
+
+        function calcularNota() {
+            // Coleta das Notas
+            const p1 = getNota('p1');
+            const p2 = getNota('p2');
+
+            // Elementos da interface
+            const resultadoDiv = document.getElementById('resultado');
+            const mediaFinalDiv = document.getElementById('media-final');
+            const notasNecessariasDiv = document.getElementById('notas-necessarias');
+            const notaFinalEl = document.getElementById('nota-final');
+            const mensagemEl = document.getElementById('mensagem');
+            const detalhamentoEl = document.getElementById('detalhamento-notas');
+
+            // Reset de estados visuais
+            mediaFinalDiv.style.display = 'none';
+            notasNecessariasDiv.style.display = 'none';
+            notasNecessariasDiv.innerHTML = '';
+            mediaFinalDiv.classList.remove('aprovado', 'recuperacao', 'reprovado');
+            mensagemEl.className = '';
+            
+            // Remove link de prova final antigo se existir
+            const linkPfWrapper = mediaFinalDiv.querySelector('.link-pf-wrapper');
+            if (linkPfWrapper) linkPfWrapper.remove();
+            
+            const PASSING_GRADE = 7.0;
+
+            // Valores numéricos para cálculo (null vira 0)
+            const valP1 = p1 !== null ? p1 : 0;
+            const valP2 = p2 !== null ? p2 : 0;
+
+            // Função para gerar o texto do detalhamento
+            const gerarDetalhamento = () => {
+                const txtP1 = typeof formatarNota === 'function' ? formatarNota(valP1) : formatarNotaLocal(valP1);
+                const txtP2 = typeof formatarNota === 'function' ? formatarNota(valP2) : formatarNotaLocal(valP2);
+                return `média P1: ${txtP1} &nbsp;&nbsp; média P2: ${txtP2}`;
+            };
+
+            // Lógica Principal
+            if (p1 !== null && p2 !== null) {
+                // --- CENÁRIO 1: TUDO PREENCHIDO ---
+                notasNecessariasDiv.style.display = 'none';
+                mediaFinalDiv.style.display = 'block';
+
+                const mediaFinalValor = (valP1 + valP2) / 2;
+                
+                // Exibe Média
+                notaFinalEl.textContent = typeof formatarNota === 'function' ? formatarNota(mediaFinalValor) : formatarNotaLocal(mediaFinalValor);
+                
+                // Mensagem baseada na função externa ou lógica local
+                mensagemEl.textContent = typeof obterMensagem === 'function' ? obterMensagem(mediaFinalValor) : (mediaFinalValor >= 7 ? "Aprovado!" : "Abaixo da média");
+
+                // Define cores e estados
+                if (mediaFinalValor >= PASSING_GRADE) {
+                    mediaFinalDiv.classList.add('aprovado');
+                    mensagemEl.classList.add('aprovado-msg');
+                } else if (mediaFinalValor >= 3) {
+                    mediaFinalDiv.classList.add('recuperacao');
+                    mensagemEl.classList.add('recuperacao-msg');
+                    
+                    // Botão Prova Final
+                    const linkPf = document.createElement('p');
+                    linkPf.className = 'link-pf-wrapper';
+                    linkPf.innerHTML = `<a href="prova-final.html" class="btn-calcular" style="display: inline-block; margin-top: 10px; text-decoration: none; text-align: center;">Cálculo da Prova Final</a>`;
+                    mediaFinalDiv.appendChild(linkPf);
+                } else {
+                    mediaFinalDiv.classList.add('reprovado');
+                    mensagemEl.classList.add('reprovado-msg');
+                }
+
+                // Preenche o detalhamento
+                detalhamentoEl.innerHTML = gerarDetalhamento();
+
+            } else {
+                // --- CENÁRIO 2: NOTAS PARCIAIS ---
+                mediaFinalDiv.style.display = 'none';
+                notasNecessariasDiv.style.display = 'block';
+
+                // Cálculo de Potenciais
+                const maxP1 = p1 !== null ? p1 : 10;
+                const maxP2 = p2 !== null ? p2 : 10;
+                const mediaPotencialMaxima = (maxP1 + maxP2) / 2;
+                const somaAtual = valP1 + valP2;
+
+                // 2a. Verifica se JÁ PASSOU (Soma >= 14)
+                if ((somaAtual / 2) >= PASSING_GRADE) {
+                    notasNecessariasDiv.innerHTML = '<h4>Resultado:</h4><p class="aprovado-msg" style="font-weight: bold;">Parabéns, você já passou! Suas notas atuais já garantem a média.</p>';
+                    // Adiciona o detalhamento aqui também, pois já há resultado prático
+                    notasNecessariasDiv.innerHTML += `<p style="font-size: 0.85em; color: #666; margin-top: 8px; border-top: 1px solid #eee; padding-top: 5px;">${gerarDetalhamento()}</p>`;
+                } 
+                // 2b. Verifica se é IMPOSSÍVEL passar
+                else if (mediaPotencialMaxima < PASSING_GRADE) {
+                    notasNecessariasDiv.innerHTML = '<h4>Resultado:</h4><p class="reprovado-msg" style="font-weight: bold;">Com as notas atuais, não é possível atingir média 7.</p>';
+                    notasNecessariasDiv.innerHTML += `<p style="font-size: 0.85em; color: #666; margin-top: 8px;">${gerarDetalhamento()}</p>`;
+                } 
+                // 2c. Ainda é possível passar, mostrar o que falta
+                else {
+                    let htmlOutput = '';
+                    
+                    // Mostra as médias parciais calculadas acima da seção "necessárias"
+                    if (p1 !== null) { 
+                        let val = typeof formatarNota === 'function' ? formatarNota(p1) : formatarNotaLocal(p1);
+                        htmlOutput += `<p style="font-weight: bold;">P1 (calculada): ${val}</p>`; 
+                    }
+                    if (p2 !== null) { 
+                        let val = typeof formatarNota === 'function' ? formatarNota(p2) : formatarNotaLocal(p2);
+                        htmlOutput += `<p style="font-weight: bold;">P2 (calculada): ${val}</p>`; 
+                    }
+
+                    htmlOutput += '<h4>Notas necessárias para média 7:</h4><ul>';
+
+                    // Formatação auxiliar
+                    const fmt = (v) => typeof formatarNota === 'function' ? formatarNota(v) : formatarNotaLocal(v);
+
+                    // Cenário: Falta P2 (tem P1)
+                    if (p1 !== null && p2 === null) {
+                        const pontosFaltam = 14 - p1;
+                        htmlOutput += `<li>Você precisa de <strong>${fmt(pontosFaltam)}</strong> na P2.</li>`;
+                    }
+                    // Cenário: Falta P1 (tem P2)
+                    else if (p1 === null && p2 !== null) {
+                        const pontosFaltam = 14 - p2;
+                        htmlOutput += `<li>Você precisa de <strong>${fmt(pontosFaltam)}</strong> na P1.</li>`;
+                    }
+                    // Cenário: Faltam ambos
+                    else {
+                        htmlOutput += `<li>P1: <strong>7.00</strong></li>`;
+                        htmlOutput += `<li>P2: <strong>7.00</strong></li>`;
+                    }
+                    
+                    htmlOutput += '</ul>';
+                    notasNecessariasDiv.innerHTML = htmlOutput;
+                }
+            }
+            // Exibe a div principal de resultados
+            resultadoDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
