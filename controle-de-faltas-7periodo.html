@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Faltas - 7º Período</title>
+    <link rel="stylesheet" href="css/style-med63.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Controle de Faltas</h1>
+            <h2>7° Período</h2>
+        </div>
+    </header>
+
+    <main class="container">
+        <br>
+        <a href="med63-hub.html" class="voltar">← Voltar para página inicial</a>
+
+        <div class="controle-faltas-container">
+
+            <div class="falta-disciplina-card">
+                <h4>ORTOPEDIA</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-orto-input">Número de faltas:</label>
+                        <input type="number" id="faltas-orto-input" min="0">
+                        <button class="btn-calcular-falta" data-disciplina-ref="orto">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode faltar: </span>
+                            <span id="faltas-orto-geral" class="valor-faltas"></span>
+                        </div>
+                        <div id="faltas-orto-prouni-container" style="display: none;">
+                            <span id="faltas-orto-prouni" class="obs-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card">
+                <h4>OFTALMOLOGIA</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-oftalmo-input">Número de faltas:
+                        </label>
+                        <input type="number" id="faltas-oftalmo-input" min="0">
+                        <button class="btn-calcular-falta" data-disciplina-ref="oftalmo">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode faltar: </span>
+                            <span id="faltas-oftalmo-geral" class="valor-faltas"></span>
+                        </div>
+                        <div id="faltas-oftalmo-prouni-container" style="display: none;">
+                            <span id="faltas-oftalmo-prouni" class="obs-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card">
+                <h4>CLÍNICA GINECOLÓGICA E OBSTÉTRICA</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-cgo-input">Número de faltas:</label>
+                        <input type="number" id="faltas-cgo-input" min="0">
+                        <button class="btn-calcular-falta" data-disciplina-ref="cgo">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode faltar: </span>
+                            <span id="faltas-cgo-geral" class="valor-faltas"></span>
+                        </div>
+                        <div id="faltas-cgo-prouni-container" style="display: none;">
+                            <span id="faltas-cgo-prouni" class="obs-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card">
+                <h4>CLÍNICA DA CRIANÇA E DO ADOLESCENTE</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-cca-input">Número de faltas:</label>
+                        <input type="number" id="faltas-cca-input" min="0">
+                        <button class="btn-calcular-falta" data-disciplina-ref="cca">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode faltar: </span>
+                            <span id="faltas-cca-geral" class="valor-faltas"></span>
+                        </div>
+                        <div id="faltas-cca-prouni-container" style="display: none;">
+                            <span id="faltas-cca-prouni" class="obs-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="falta-disciplina-card">
+                <h4>CLÍNICA MÉDICA I</h4>
+                <div class="falta-input-area">
+                    <div class="input-group-faltas">
+                        <label for="faltas-cm1-input">Número de faltas:</label>
+                        <input type="number" id="faltas-cm1-input" min="0">
+                        <button class="btn-calcular-falta" data-disciplina-ref="cm1">Calcular</button>
+                    </div>
+                    <div class="faltas-pode-ter">
+                        <div>
+                            <span class="texto-fino">Ainda pode faltar: </span>
+                            <span id="faltas-cm1-geral" class="valor-faltas"></span>
+                        </div>
+                        <div id="faltas-cm1-prouni-container" style="display: none;">
+                            <span id="faltas-cm1-prouni" class="obs-prouni"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+                <br><br>
+        <div class="explicacao">
+                <h4>EXPLICAÇÃO:</h4><br>
+            <h5>CLÍNICA MÉDICA I</h5>            
+            288h totais<br>
+            1 falta = -0.3475%<br>
+            <br>
+            <h5>CLÍNICA DA CRIANÇA E DO ADOLESCENTE</h5>                                       
+            144h totais<br>
+            1 falta = -0.695%<br>
+            <br>
+            <h5>CLÍNICA GINECOLÓGICA E OBSTÉTRICA</h5>
+            92h totais<br>
+            1 falta = -1.087%<br>
+            <br>
+            <h5>OFTALMOLOGIA</h5>                         
+            54h totais<br>
+            1 falta = -1.852%<br>
+            <br>
+            <h5>ORTOPEDIA</h5>                                  
+            18h totais<br>
+            1 falta = -5.56%<br>
+        </div>
+
+        <br><br>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Autoria de Gabriel Papa</p>
+        </div>
+    </footer>
+
+    <script src="js/controle-faltas-7periodo.js"></script>
+</body>
+</html>
